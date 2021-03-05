@@ -1,0 +1,88 @@
+// div
+//     background: linear-gradient(#FFFF00, #00FF00, #00C4FF, #D800FF, #0A00FF, #FF0000)
+//     background: linear-gradient(#00FF00 33.33%, #00C4FF 3%, #0A00FF 33.33%)
+//     width: 300px
+//     height: 300px#00C4FF
+//     background: #9198e5
+//     backgrsound: linear-gradient(#e66465, #9198e5)#49fb35  #FF0000, #FFFF00,
+//
+body
+    background-color: #111
+//     display: grid
+//     justify-content: center #9300FF
+.outer
+    //background: linear-gradient(#D800FF, #FF0000, #FFFF00 3%, #00C4FF, #0A00FF)
+    //background: linear-gradient(#B100FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+    background: linear-gradient(#9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+    position: relative
+    animation: rotate 1.5s linear infinite
+
+    button
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background: none
+        color: #f2f2f2
+        font-size: 20px
+        border: none
+        outline: none
+        letter-spacing: 1px
+        transform: uppercase
+        cursor: pointer
+        z-index: 9
+
+    span
+        position: absolute
+        top: 0
+        left: 0
+        //transform: translate(-50%, -50%)
+        height: 100%
+        width: 100%
+        background: inherit
+        border-radius: 50px
+        filter: blur(7px)
+
+
+.button
+    height: 70px
+    width: 150px
+    border-radius: 50px
+
+    button
+        height: 60px
+        width: 210px
+        border-radius: 50px
+
+    //The spans are for the blur, so it looks like it glows and doesnt affect the inside as blurry
+    span
+        border-radius: 50px
+
+@keyframes rotate
+    0%
+        filter: hue-rotate(0deg)
+    100%
+        filter: hue-rotate(360deg)
+
+
+.color
+    background: linear-gradient(#9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+    width: 200px
+    height: 70px
+    position: relative
+    border-radius: 50px
+    animation: rotate 1.5s linear infinite
+    button
+        position: absolute
+        z-index: 1
+        top: 0
+        bottom: 0
+        border-radius: 50px
+        color: #FFFF
+        font-size: 20px
+        width: 100%
+
+        //This is to take out default button styles
+        outline: none
+        background: none
+        border: none
