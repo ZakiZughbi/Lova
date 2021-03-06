@@ -1,0 +1,78 @@
+@import ./variables.sass
+
+
+.wave
+    position: relative
+    margin-top: -9px
+    //Top Wave
+    .custom-shape-divider-top-1614958383
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        overflow: hidden
+        line-height: 0
+        z-index: 1
+
+        svg
+            position: relative
+            display: block
+            width: calc(136% + 1.3px)
+            height: 175px
+            transform: rotate(0.6deg)
+
+        .shape-fill
+            fill: $primeBlack
+
+
+    //Bottom Wave
+    .custom-shape-divider-bottom-1614959127-5
+        position: absolute
+        top: -120px
+        left: 0
+        width: 100%
+        overflow: hidden
+        line-height: 0
+        transform: rotate(180deg)
+        z-index: 1
+
+
+        svg
+            position: relative
+            display: block
+            width: calc(156% + 1.3px)
+            height: 230px
+            transform: rotate(3deg)
+
+
+        .shape-fill
+            fill: $primeBlack
+
+
+    //Under Div
+    .color
+        width: 100%
+        height: 110px
+        background: linear-gradient(-45deg, #9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+        position: absolute
+        top: 0
+        left: 0
+        transform: rotate(0.0deg)
+        animation: rotate 1.5s linear infinite
+
+    .fill
+        position: absolute
+        height: 100px
+        width: 20%
+        background-color: $primeBlack
+        top: 100px
+        left: -3px
+        z-index: 3
+        transform: rotate(3deg)
+
+//Aniamtion
+@keyframes rotate
+    0%
+        filter: hue-rotate(0deg)
+    100%
+        filter: hue-rotate(360deg)

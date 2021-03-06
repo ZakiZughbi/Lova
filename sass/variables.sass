@@ -1,0 +1,27 @@
+//Fonts
+$classFont: 'Cardo', serif
+$modFont: 'Oswald', sans-serif
+
+//Colors
+$primeWhite: #FFFFFF
+$primeBlack: #121212
+$primeGrey: #666666
+
+//RGB
+$rgbsecBlue: #00C4FF
+$rgbBlue: #0A00FF
+$rgbGreen: #49fb35
+$rgbRed: #FF0000
+$rgbPink: #D800FF
+$rgbPurple: #9300FF
+$rgbYellow: #FFFF00
+
+@mixin rgb()
+    background: linear-gradient(#9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+    animation: rotate 1.5s linear infinite
+
+@keyframes rotate
+    0%
+        filter: hue-rotate(0deg)
+    100%
+        filter: hue-rotate(360deg)

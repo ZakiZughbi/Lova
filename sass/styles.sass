@@ -2,8 +2,247 @@
 @import ./variables.sass
 @import ./nav.sass
 @import ./footer.sass
+@import ./wave.sass
 
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+
+// body
+//     background: $primeBlack
+//
+
+.container
+    max-width: 1500px
+    margin: 0 auto !important
+
+#phone
+    display: none
+
+.header
+    position: relative
+    z-index: 2
+    nav
+        display: flex
+        align-items: center
+        padding: 15px 3%
+        background-color: $primeBlack
+        justify-content: space-between
+        #logo
+            img
+                width: 170px
+        .menu
+            .navlinks
+                display: flex
+                align-items: center
+                li
+                    font-family: $modFont
+                    font-size: 23px
+                    margin: 0 20px
+                    list-style: none
+                    color: $primeWhite
+                    &:nth-child(3)
+                        @include rgb()
+                        //padding: 7px 15px
+                        border-radius: 10px
+                        padding: 5px
+                        animation: rotate 1.5s linear infinite
+                        div
+                            width: 100%
+                            //height: 15px
+                            //padding: 10px 15px
+                            padding: 7px 15px
+                            border-radius: 10px
+                            background-color: $primeBlack
+
+    .homeImg
+        position: relative
+        h2
+            font-family: $modFont
+            font-size: 100px
+            color: $primeWhite
+            position: absolute
+            top: 30%
+            left: 38%
+
+        img
+            width: 100%
+
+.bio
+    background-color: $primeBlack
+    position: relative
+    z-index: 2
+    top: 105px
+    display: flex
+    justify-content: center
+    padding: 15% 7%
+    .profile
+        display: flex
+        align-items: center
+        margin-right: 10%
+        //justify-content: space-around
+
+        img
+            border-radius: 50%
+            width: 250px
+            min-width: 200px
+            margin-right: 30px
+        .title
+            h3
+                font-family: $modFont
+                font-size: 30px
+                color: $primeWhite
+            .underline
+                width: 220px
+                background-color: $primeWhite
+                height: 2px
+            p
+                color: $primeGrey
+                font-size: 22px
+                font-family: $modFont
+    .content
+        //display: flex
+        align-items: flex-end
+        margin-top: 10%
+        p
+            font-family: $classFont
+            font-size: 23px
+            color: $primeWhite
+            width: 100%
+
+.sec1
+    //position: relative
+    background-color: $primeBlack
+    padding: 20% 5%
+    h2
+        color: $primeWhite
+        font-family: $modFont
+        font-size: 40px
+    p
+        color: $primeWhite
+        font-size: 22px
+        font-family: $classFont
+        padding: 3%
+        width: 62%
+    .imgContainer
+        position: relative
+        right: 0
+        img
+            width: 30%
+            position: absolute
+            bottom: 0 - 150px
+            right: 15px
+            z-index: 1
+        .border
+            width: 30%
+            height: 550px
+            //max-height: 550px
+            border: 4px solid $primeWhite
+            position: absolute
+            bottom: 50px  - 150px
+            right: -20px
+
+.sloganContainer
+    //position: relative
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 200px 200px 200px
+    .h2Container
+        padding: 2%
+        margin: 0 5%
+        grid-column: 1
+        grid-row: 2
+        z-index: 9
+        h2
+            font-family: $modFont
+            font-size: 70px
+            font-weight: 300
+            text-align: center
+            padding: 2%
+            margin: 0 13%
+            background-color: $primeWhite
+            &:nth-child(2)
+                color: $primeWhite
+                background-color: black
+
+    img
+        width: 100%
+        grid-column: 1
+        grid-row-start: 1
+        grid-row-end: 5
+
+// .sec2
+//     background: $primeBlack
+//     padding: 10% 5%
+//     h2
+//         color: $primeWhite
+//         font-family: $modFont
+//         font-size: 40px
+//     p
+//         color: $primeWhite
+//         font-size: 22px
+//         font-family: $classFont
+//         padding: 3%
+//         width: 62%
+//     .imageCollage
+//         position: relative
+//         img
+//             &:nth-child(3)
+//                 position: absolute
+//                 right: 30px
+//                 //bottom: 160px
+//                 bottom: -120px
+//                 width: 17%
+//             &:nth-child(2)
+//                 position: absolute
+//                 right: 20%
+//                 bottom: 160px
+//                 width: 13%
+//             &:nth-child(1)
+//                 position: absolute
+//                 right: 20%
+//                 top: -105px
+//                 width: 37%
+
+.sec2
+    background: $primeBlack
+    padding: 17.5% 5%
+    h2
+        color: $primeWhite
+        font-family: $modFont
+        font-size: 40px
+        margin-bottom: 3%
+    p
+        color: $primeWhite
+        font-size: 22px
+        font-family: $classFont
+        padding:  0 3% 3%
+        width: 62%
+        margin-bottom: 5%
+    .imageCollage
+        position: relative
+        top: 220px
+        img
+
+
+            &:nth-child(1)
+                width: 41%
+                position: absolute
+                bottom: 0
+                right: 19%
+
+        div
+            img
+                &:nth-child(1)
+                    width: 14.5%
+                    position: absolute
+                    right: 19%
+                    bottom: 0
+                    margin-bottom: 19%
+
+                &:nth-child(2)
+                    width: 18%
+                    position: absolute
+                    right: 0
+                    bottom: 0
