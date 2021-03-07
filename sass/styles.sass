@@ -9,9 +9,9 @@
     padding: 0
     box-sizing: border-box
 
-// body
-//     background: $primeBlack
-//
+body
+    background: $primeBlack
+
 
 .container
     max-width: 1500px
@@ -29,13 +29,38 @@
         padding: 15px 3%
         background-color: $primeBlack
         justify-content: space-between
+        @include mQ(750px)
+            padding: 2% 3%
+
         #logo
             img
                 width: 170px
+                @include mQ(750px)
+                    width: 27%
+                    min-width: 15%
         .menu
+            .menuBars
+                display: none
+                @include mQ(750px)
+                    display: block
+                .line
+                    width: 60px
+                    height: 5px
+                    background: $primeWhite
+                    margin: 8px 0
+                    &:nth-child(2)
+                        width: 45px
+                        margin-left: auto
+                    &:nth-child(3)
+                        width: 30px
+                        margin-left: auto
+
             .navlinks
                 display: flex
                 align-items: center
+                @include mQ(750px)
+                    display: none
+
                 li
                     font-family: $modFont
                     font-size: 23px
@@ -44,39 +69,55 @@
                     color: $primeWhite
                     &:nth-child(3)
                         @include rgb()
-                        //padding: 7px 15px
                         border-radius: 10px
                         padding: 5px
                         animation: rotate 1.5s linear infinite
                         div
                             width: 100%
-                            //height: 15px
-                            //padding: 10px 15px
                             padding: 7px 15px
                             border-radius: 10px
                             background-color: $primeBlack
 
     .homeImg
-        position: relative
+        //position: relative
+        display: grid
+        grid-template-columns: 1fr 2fr 1fr
+        grid-template-rows: 1fr 1fr 1fr
         h2
             font-family: $modFont
             font-size: 100px
             color: $primeWhite
-            position: absolute
-            top: 30%
-            left: 38%
+            grid-column: 2
+            text-align: center
+            grid-row: 2
+            z-index: 1
+            @include mQ(850px)
+                font-size: 80px
+            // position: absolute
+            // top: 30%
+            // left: 37%
+            // @include mQ(750px)
+            //     font-size: 15vh
+
 
         img
             width: 100%
+            grid-column-start: 1
+            grid-column-end: 4
+            grid-row-start: 1
+            grid-row-end: 4
 
 .bio
     background-color: $primeBlack
     position: relative
     z-index: 2
-    top: 105px
+    top: 105px + 46px + 3px
     display: flex
     justify-content: center
     padding: 15% 7%
+    @include mQ(1215px)
+        top: 105px + 46px + 3px + 120px
+
     .profile
         display: flex
         align-items: center
@@ -115,6 +156,7 @@
     //position: relative
     background-color: $primeBlack
     padding: 20% 5%
+    margin-top: 46px
     h2
         color: $primeWhite
         font-family: $modFont
@@ -128,6 +170,7 @@
     .imgContainer
         position: relative
         right: 0
+        //border: 1px solid blue
         img
             width: 30%
             position: absolute
@@ -136,12 +179,14 @@
             z-index: 1
         .border
             width: 30%
-            height: 550px
+            //height:
             //max-height: 550px
+            padding-top: 42%
             border: 4px solid $primeWhite
             position: absolute
             bottom: 50px  - 150px
             right: -20px
+            //overflow: hidden
 
 .sloganContainer
     //position: relative
@@ -171,39 +216,6 @@
         grid-column: 1
         grid-row-start: 1
         grid-row-end: 5
-
-// .sec2
-//     background: $primeBlack
-//     padding: 10% 5%
-//     h2
-//         color: $primeWhite
-//         font-family: $modFont
-//         font-size: 40px
-//     p
-//         color: $primeWhite
-//         font-size: 22px
-//         font-family: $classFont
-//         padding: 3%
-//         width: 62%
-//     .imageCollage
-//         position: relative
-//         img
-//             &:nth-child(3)
-//                 position: absolute
-//                 right: 30px
-//                 //bottom: 160px
-//                 bottom: -120px
-//                 width: 17%
-//             &:nth-child(2)
-//                 position: absolute
-//                 right: 20%
-//                 bottom: 160px
-//                 width: 13%
-//             &:nth-child(1)
-//                 position: absolute
-//                 right: 20%
-//                 top: -105px
-//                 width: 37%
 
 .sec2
     background: $primeBlack
@@ -246,3 +258,80 @@
                     position: absolute
                     right: 0
                     bottom: 0
+
+.footer
+    background: $primeWhite
+    padding: 1% 0
+    .translateContainer
+        margin: 1%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        img
+            width: 2%
+            margin: 0 5px
+        .lanContainer
+            display: none
+            ul
+                display: flex
+                list-style: none
+                font-family: $classFont
+                color: #959595
+                li
+                    margin: 12px
+    h2
+        font-family: $modFont
+        color: $primeBlack
+        font-size: 50px
+        font-weight: 300
+        text-align: center
+        border-bottom: 4px solid $primeBlack
+        margin: 0 20.5%
+        //font-size: 3.5vw
+        @include mQ(1450px)
+            font-size: 3.5vw
+    .bottom
+        margin-top: 6%
+        //padding-bottom: 2%
+        display: flex
+        justify-content: space-around
+        .media
+            display: flex
+            width: 30%
+            align-items: flex-end
+            //border: 1px solid blue
+            //margin-left: 1%
+            img
+                width: 6%
+                margin: 0 2.5%
+        .btnContainer
+            width: 30%
+            //border: 1px solid black
+            display: flex
+            justify-content: center
+            align-items: center
+            a
+                text-decoration: none
+                .outer
+                    @include rgb()
+                    //background: blue
+                    width: 150px
+                    padding: 5px
+                    border-radius: 7px
+                    //animation: rotate 1.5s linear infinite
+                    .inner
+                        text-align: center
+                        background: $primeBlack
+                        padding: 5px
+                        color: $primeWhite
+                        font-size: 23px
+                        font-family: $modFont
+                        border-radius: 7px
+
+        .logoContainer
+            width: 30%
+            //border: 1px solid red
+            display: flex
+            justify-content: flex-end
+            img
+                width: 40%

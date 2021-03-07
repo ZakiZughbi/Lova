@@ -25,3 +25,7 @@ $rgbYellow: #FFFF00
         filter: hue-rotate(0deg)
     100%
         filter: hue-rotate(360deg)
+
+@mixin mQ($arg)
+    @media only screen and (max-width: $arg)
+        @content
