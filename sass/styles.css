@@ -89,17 +89,17 @@
   height: 230px;
   transform: rotate(3deg);
 }
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1200px) {
   .wave .custom-shape-divider-bottom-1614959127-5 svg {
     transform: rotate(4deg);
   }
 }
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 890px) {
   .wave .custom-shape-divider-bottom-1614959127-5 svg {
     transform: rotate(5deg);
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .wave .custom-shape-divider-bottom-1614959127-5 svg {
     transform: rotate(7deg);
   }
@@ -134,12 +134,8 @@
 }
 @media only screen and (max-width: 1215px) {
   .wave .fill2 {
-    top: 158px;
+    top: 156px;
     width: 22%;
-  }
-}
-@media only screen and (max-width: 1010px) {
-  .wave .fill2 {
     transform: rotate(4deg);
   }
 }
@@ -148,7 +144,7 @@
     transform: rotate(6deg);
     width: 22%;
     left: -5px;
-    top: 157px;
+    top: 156px;
   }
 }
 
@@ -164,6 +160,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: #121212;
 }
 
 .container {
@@ -461,7 +461,7 @@
 .sloganContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
 }
 .sloganContainer .h2Container {
   padding: 2%;
@@ -469,6 +469,12 @@
   grid-column: 1;
   grid-row: 2;
   z-index: 9;
+}
+@media only screen and (max-width: 950px) {
+  .sloganContainer .h2Container {
+    margin: 0;
+    padding: 0%;
+  }
 }
 .sloganContainer .h2Container h2 {
   font-family: "Oswald", sans-serif;
@@ -479,14 +485,25 @@
   margin: 0 13%;
   background-color: #FFFFFF;
 }
+.sloganContainer .h2Container h2:nth-child(2) {
+  color: #FFFFFF;
+  background-color: black;
+}
 @media only screen and (max-width: 1100px) {
   .sloganContainer .h2Container h2 {
     font-size: 55px;
   }
 }
-.sloganContainer .h2Container h2:nth-child(2) {
-  color: #FFFFFF;
-  background-color: black;
+@media only screen and (max-width: 950px) {
+  .sloganContainer .h2Container h2 {
+    margin: 0;
+    font-size: 9vw;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .sloganContainer .h2Container h2 {
+    font-size: 10vw;
+  }
 }
 .sloganContainer img {
   width: 100%;
@@ -501,7 +518,7 @@
 }
 @media only screen and (max-width: 950px) {
   .sec2 {
-    padding-bottom: 17.5%;
+    padding-bottom: 0%;
   }
 }
 .sec2 h2 {
@@ -539,7 +556,7 @@
 }
 @media only screen and (max-width: 950px) {
   .sec2 p {
-    padding: 10% 7%;
+    padding: 10% 7% 22.5%;
     width: 100%;
     text-align: center;
     margin-bottom: 0;
@@ -580,8 +597,9 @@
   .sec2 .phoneImageCollage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    margin: -5%;
+    grid-template-rows: 2fr auto;
+    margin: 0 -5%;
+    padding: 1% 0;
   }
   .sec2 .phoneImageCollage img:nth-child(1) {
     grid-column: 1;
@@ -605,15 +623,37 @@
   background: #FFFFFF;
   padding: 1% 0;
 }
+@media only screen and (max-width: 775px) {
+  .footer {
+    position: relative;
+  }
+}
 .footer .translateContainer {
   margin: 1%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 775px) {
+  .footer .translateContainer {
+    position: absolute;
+    right: 1%;
+    bottom: 2%;
+  }
+}
 .footer .translateContainer img {
-  width: 2%;
+  width: 30px;
   margin: 0 5px;
+}
+@media only screen and (max-width: 1030px) {
+  .footer .translateContainer img {
+    width: 25px;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .footer .translateContainer img {
+    width: 35px;
+  }
 }
 .footer .translateContainer .lanContainer {
   display: none;
@@ -641,25 +681,59 @@
     font-size: 3.5vw;
   }
 }
+@media only screen and (max-width: 1130px) {
+  .footer h2 {
+    margin: 5% 15% 10%;
+    font-size: 4.2vw;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .footer h2 {
+    font-size: 6.5vw;
+    border: none;
+    margin: 7% 7% 10%;
+  }
+}
 .footer .bottom {
   margin-top: 6%;
   display: flex;
   justify-content: space-around;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom {
+    flex-wrap: wrap;
+  }
 }
 .footer .bottom .media {
   display: flex;
   width: 30%;
   align-items: flex-end;
 }
+@media only screen and (max-width: 775px) {
+  .footer .bottom .media {
+    display: block;
+  }
+}
 .footer .bottom .media img {
-  width: 6%;
+  width: 25px;
   margin: 0 2.5%;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom .media img {
+    width: 15%;
+    border-bottom: 1px solid #666666;
+  }
 }
 .footer .bottom .btnContainer {
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom .btnContainer {
+    display: none;
+  }
 }
 .footer .bottom .btnContainer a {
   text-decoration: none;
@@ -671,6 +745,11 @@
   padding: 5px;
   border-radius: 7px;
 }
+@media only screen and (max-width: 1030px) {
+  .footer .bottom .btnContainer a .outer {
+    width: 120px;
+  }
+}
 .footer .bottom .btnContainer a .outer .inner {
   text-align: center;
   background: #121212;
@@ -680,13 +759,34 @@
   font-family: "Oswald", sans-serif;
   border-radius: 7px;
 }
+@media only screen and (max-width: 1030px) {
+  .footer .bottom .btnContainer a .outer .inner {
+    font-size: 20px;
+  }
+}
 .footer .bottom .logoContainer {
   width: 30%;
+  height: auto;
   display: flex;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 775px) {
+  .footer .bottom .logoContainer {
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-end;
+    margin: 0 3% 1%;
+  }
+}
 .footer .bottom .logoContainer img {
   width: 40%;
+  min-width: 140px;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom .logoContainer img {
+    justify-content: flex-start;
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

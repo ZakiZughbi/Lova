@@ -10,7 +10,7 @@
     box-sizing: border-box
 
 body
-    //background: $primeBlack
+    background: $primeBlack
 
 
 .container
@@ -248,13 +248,16 @@ body
     display: grid
     grid-template-columns: 1fr
     // grid-template-rows: 200px 200px 200px
-    grid-template-rows: 1fr 2fr 1fr
+    grid-template-rows: 1fr auto 1fr
     .h2Container
         padding: 2%
         margin: 0 5%
         grid-column: 1
         grid-row: 2
         z-index: 9
+        @include mQ(950px)
+            margin: 0
+            padding: 0%
         h2
             font-family: $modFont
             font-size: 70px
@@ -263,11 +266,17 @@ body
             padding: 2%
             margin: 0 13%
             background-color: $primeWhite
-            @include mQ(1100px)
-                font-size: 55px
             &:nth-child(2)
                 color: $primeWhite
                 background-color: black
+            @include mQ(1100px)
+                font-size: 55px
+            @include mQ(950px)
+                margin: 0
+                font-size: 9vw
+            @include mQ(560px)
+                font-size: 10vw
+
 
     img
         width: 100%
@@ -279,7 +288,7 @@ body
     background: $primeBlack
     padding: 17.5% 5% 330px
     @include mQ(950px)
-        padding-bottom: 17.5%
+        padding-bottom: 0%
 
     h2
         color: $primeWhite
@@ -306,7 +315,7 @@ body
             font-size: 20px
             margin-bottom: -5%
         @include mQ(950px)
-            padding: 10% 7%
+            padding: 10% 7% 17.5% + 5%
             width: 100%
             text-align: center
             margin-bottom: 0
@@ -341,27 +350,14 @@ body
                     right: 0
                     bottom: 0
 
-    // .phoneImageCollage
-    //     display: flex
-    //     flex-wrap: wrap
-    //     width: 100%
-    //     justify-content: center
-    //
-    //     img
-    //         &:nth-child(1)
-
-                //width: 48%
-            //width: auto
-        // justify-content: center
-        // align-items: center
-
     .phoneImageCollage
         display: none
         @include mQ(950px)
             display: grid
             grid-template-columns: 1fr 1fr
-            grid-template-rows: 2fr 1fr
-            margin: -5%
+            grid-template-rows: 2fr auto
+            margin: 0 -5%
+            padding: 1% 0
             img
                 &:nth-child(1)
                     grid-column: 1
@@ -383,14 +379,28 @@ body
 .footer
     background: $primeWhite
     padding: 1% 0
+    @include mQ(775px)
+        position: relative
+
     .translateContainer
         margin: 1%
         display: flex
         align-items: center
         justify-content: flex-end
+        @include mQ(775px)
+            position: absolute
+            right: 1%
+            bottom: 2%
+
         img
-            width: 2%
+            width: 30px
             margin: 0 5px
+            @include mQ(1030px)
+                width: 25px
+            @include mQ(775px)
+                width: 35px
+
+
         .lanContainer
             display: none
             ul
@@ -411,26 +421,47 @@ body
         //font-size: 3.5vw
         @include mQ(1450px)
             font-size: 3.5vw
+        @include mQ(1130px)
+            margin: 5% 15% 10%
+            font-size: 4.2vw
+        @include mQ(775px)
+            // font-size: 40px
+            font-size: 6.5vw
+            border: none
+            margin: 7% 7% 10%
+
     .bottom
         margin-top: 6%
         //padding-bottom: 2%
         display: flex
         justify-content: space-around
+        @include mQ(775px)
+            flex-wrap: wrap
+
         .media
             display: flex
             width: 30%
             align-items: flex-end
-            //border: 1px solid blue
-            //margin-left: 1%
+            @include mQ(775px)
+                display: block
+
             img
-                width: 6%
+                width: 25px
                 margin: 0 2.5%
+                @include mQ(775px)
+                    width: 15%
+                    border-bottom: 1px solid $primeGrey
+
+
         .btnContainer
             width: 30%
             //border: 1px solid black
             display: flex
             justify-content: center
             align-items: center
+            @include mQ(775px)
+                display: none
+
             a
                 text-decoration: none
                 .outer
@@ -439,7 +470,9 @@ body
                     width: 150px
                     padding: 5px
                     border-radius: 7px
-                    //animation: rotate 1.5s linear infinite
+                    @include mQ(1030px)
+                        width: 120px
+
                     .inner
                         text-align: center
                         background: $primeBlack
@@ -448,11 +481,25 @@ body
                         font-size: 23px
                         font-family: $modFont
                         border-radius: 7px
+                        @include mQ(1030px)
+                            font-size: 20px
 
         .logoContainer
             width: 30%
+            //min-width: 350px
+            height: auto
             //border: 1px solid red
             display: flex
             justify-content: flex-end
+            @include mQ(775px)
+                justify-content: flex-start
+                width: 100%
+                align-items: flex-end
+                margin: 0 3% 1%
+
             img
                 width: 40%
+                min-width: 140px
+                @include mQ(775px)
+                    justify-content: flex-start
+                    width: 25%
