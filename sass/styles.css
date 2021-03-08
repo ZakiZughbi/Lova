@@ -45,7 +45,7 @@
   position: absolute;
   top: 46px;
   left: -1px;
-  width: 101%;
+  width: 100.1%;
   overflow: hidden;
   line-height: 0;
   z-index: 1;
@@ -73,12 +73,13 @@
 @media only screen and (max-width: 1215px) {
   .wave .custom-shape-divider-bottom-1614959127-5 {
     top: -64px;
-    width: 102%;
+    width: 100%;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 600px) {
   .wave .custom-shape-divider-bottom-1614959127-5 {
-    width: 103%;
+    width: 100%;
   }
 }
 .wave .custom-shape-divider-bottom-1614959127-5 svg {
@@ -165,10 +166,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #121212;
-}
-
 .container {
   max-width: 1500px;
   margin: 0 auto !important;
@@ -176,6 +173,20 @@ body {
 
 #phone {
   display: none;
+}
+@media only screen and (max-width: 950px) {
+  #phone {
+    display: block;
+  }
+}
+
+#fullwidth {
+  display: block;
+}
+@media only screen and (max-width: 950px) {
+  #fullwidth {
+    display: none;
+  }
 }
 
 .header {
@@ -292,13 +303,25 @@ body {
 }
 @media only screen and (max-width: 1215px) {
   .bio {
-    top: 274px;
+    top: 164px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .bio {
+    flex-wrap: wrap;
+    padding: 130px 7%;
   }
 }
 .bio .profile {
   display: flex;
   align-items: center;
   margin-right: 10%;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .bio .profile {
+    margin: 0 15%;
+  }
 }
 .bio .profile img {
   border-radius: 50%;
@@ -306,10 +329,20 @@ body {
   min-width: 200px;
   margin-right: 30px;
 }
+@media only screen and (max-width: 990px) {
+  .bio .profile img {
+    width: 22%;
+  }
+}
 .bio .profile .title h3 {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   color: #FFFFFF;
+}
+@media only screen and (max-width: 990px) {
+  .bio .profile .title h3 {
+    font-size: 35px;
+  }
 }
 .bio .profile .title .underline {
   width: 220px;
@@ -331,16 +364,45 @@ body {
   color: #FFFFFF;
   width: 100%;
 }
+@media only screen and (max-width: 1165px) {
+  .bio .content p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .bio .content p {
+    font-size: 20px;
+    padding: 0 7%;
+    text-align: center;
+  }
+}
 
 .sec1 {
   background-color: #121212;
   padding: 20% 5%;
   margin-top: 46px;
 }
+@media only screen and (max-width: 1215px) {
+  .sec1 {
+    margin-top: 166px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .sec1 {
+    flex-wrap: wrap;
+    padding: 28% 5%;
+  }
+}
 .sec1 h2 {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   font-size: 40px;
+}
+@media only screen and (max-width: 950px) {
+  .sec1 h2 {
+    font-size: 70px;
+    padding-left: 5%;
+  }
 }
 .sec1 p {
   color: #FFFFFF;
@@ -349,9 +411,36 @@ body {
   padding: 3%;
   width: 62%;
 }
+@media only screen and (max-width: 1165px) {
+  .sec1 p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .sec1 p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .sec1 p {
+    padding: 10% 7%;
+    width: 100%;
+    text-align: center;
+  }
+}
 .sec1 .imgContainer {
   position: relative;
   right: 0;
+}
+@media only screen and (max-width: 1100px) {
+  .sec1 .imgContainer {
+    margin-top: -10%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .sec1 .imgContainer {
+    display: none;
+  }
 }
 .sec1 .imgContainer img {
   width: 30%;
@@ -372,7 +461,7 @@ body {
 .sloganContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 .sloganContainer .h2Container {
   padding: 2%;
@@ -390,6 +479,11 @@ body {
   margin: 0 13%;
   background-color: #FFFFFF;
 }
+@media only screen and (max-width: 1100px) {
+  .sloganContainer .h2Container h2 {
+    font-size: 55px;
+  }
+}
 .sloganContainer .h2Container h2:nth-child(2) {
   color: #FFFFFF;
   background-color: black;
@@ -403,13 +497,25 @@ body {
 
 .sec2 {
   background: #121212;
-  padding: 17.5% 5%;
+  padding: 17.5% 5% 330px;
+}
+@media only screen and (max-width: 950px) {
+  .sec2 {
+    padding-bottom: 17.5%;
+  }
 }
 .sec2 h2 {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   margin-bottom: 3%;
+}
+@media only screen and (max-width: 950px) {
+  .sec2 h2 {
+    font-size: 70px;
+    padding-left: 5%;
+    margin-bottom: 0%;
+  }
 }
 .sec2 p {
   color: #FFFFFF;
@@ -419,28 +525,80 @@ body {
   width: 62%;
   margin-bottom: 5%;
 }
-.sec2 .imageCollage {
+@media only screen and (max-width: 1165px) {
+  .sec2 p {
+    font-size: 18px;
+    margin-bottom: 1%;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .sec2 p {
+    font-size: 20px;
+    margin-bottom: -5%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .sec2 p {
+    padding: 10% 7%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+.sec2 .fullImageCollage {
   position: relative;
   top: 220px;
 }
-.sec2 .imageCollage img:nth-child(1) {
+@media only screen and (max-width: 950px) {
+  .sec2 .fullImageCollage {
+    display: none;
+  }
+}
+.sec2 .fullImageCollage img:nth-child(1) {
   width: 41%;
   position: absolute;
   bottom: 0;
   right: 19%;
 }
-.sec2 .imageCollage div img:nth-child(1) {
+.sec2 .fullImageCollage div img:nth-child(1) {
   width: 14.5%;
   position: absolute;
   right: 19%;
   bottom: 0;
   margin-bottom: 19%;
 }
-.sec2 .imageCollage div img:nth-child(2) {
+.sec2 .fullImageCollage div img:nth-child(2) {
   width: 18%;
   position: absolute;
   right: 0;
   bottom: 0;
+}
+.sec2 .phoneImageCollage {
+  display: none;
+}
+@media only screen and (max-width: 950px) {
+  .sec2 .phoneImageCollage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    margin: -5%;
+  }
+  .sec2 .phoneImageCollage img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
+  .sec2 .phoneImageCollage img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+  }
+  .sec2 .phoneImageCollage img:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    width: 100%;
+  }
 }
 
 .footer {

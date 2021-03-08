@@ -10,7 +10,7 @@
     box-sizing: border-box
 
 body
-    background: $primeBlack
+    //background: $primeBlack
 
 
 .container
@@ -19,6 +19,14 @@ body
 
 #phone
     display: none
+    @include mQ(950px)
+        display: block
+
+#fullwidth
+    display: block
+    @include mQ(950px)
+        display: none
+
 
 .header
     position: relative
@@ -116,24 +124,36 @@ body
     justify-content: center
     padding: 15% 7%
     @include mQ(1215px)
-        top: 105px + 46px + 3px + 120px
+        top: (105px + 46px + 3px) + 10px
+    @include mQ(990px)
+        flex-wrap: wrap
+        padding: 130px 7%
 
     .profile
         display: flex
         align-items: center
         margin-right: 10%
-        //justify-content: space-around
+        justify-content: center
+        @include mQ(600px)
+            margin: 0 15%
+
 
         img
             border-radius: 50%
             width: 250px
             min-width: 200px
             margin-right: 30px
+            @include mQ(990px)
+                width: 22%
+
         .title
             h3
                 font-family: $modFont
                 font-size: 30px
                 color: $primeWhite
+                @include mQ(990px)
+                    font-size: 35px
+
             .underline
                 width: 220px
                 background-color: $primeWhite
@@ -151,25 +171,60 @@ body
             font-size: 23px
             color: $primeWhite
             width: 100%
+            @include mQ(1165px)
+                font-size: 18px
+            @include mQ(990px)
+                font-size: 20px
+                padding: 0 7%
+                text-align: center
+
 
 .sec1
     //position: relative
     background-color: $primeBlack
     padding: 20% 5%
     margin-top: 46px
+    @include mQ(1215px)
+        margin-top: 46px + 120px
+    @include mQ(1200px)
+        flex-wrap: wrap
+        padding: 28% 5%
+
+                    //280px
+
     h2
         color: $primeWhite
         font-family: $modFont
         font-size: 40px
+        @include mQ(950px)
+            font-size: 70px
+            padding-left: 5%
+
     p
         color: $primeWhite
         font-size: 22px
         font-family: $classFont
         padding: 3%
         width: 62%
+        @include mQ(1165px)
+            font-size: 18px
+        @include mQ(990px)
+            font-size: 20px
+        @include mQ(950px)
+            padding: 10% 7%
+            width: 100%
+            text-align: center
+
+
     .imgContainer
         position: relative
         right: 0
+        @include mQ(1100px)
+            margin-top: -10%
+        @include mQ(950px)
+            display: none
+
+
         //border: 1px solid blue
         img
             width: 30%
@@ -192,7 +247,8 @@ body
     //position: relative
     display: grid
     grid-template-columns: 1fr
-    grid-template-rows: 200px 200px 200px
+    // grid-template-rows: 200px 200px 200px
+    grid-template-rows: 1fr 2fr 1fr
     .h2Container
         padding: 2%
         margin: 0 5%
@@ -207,6 +263,8 @@ body
             padding: 2%
             margin: 0 13%
             background-color: $primeWhite
+            @include mQ(1100px)
+                font-size: 55px
             &:nth-child(2)
                 color: $primeWhite
                 background-color: black
@@ -219,25 +277,49 @@ body
 
 .sec2
     background: $primeBlack
-    padding: 17.5% 5%
+    padding: 17.5% 5% 330px
+    @include mQ(950px)
+        padding-bottom: 17.5%
+
     h2
         color: $primeWhite
         font-family: $modFont
         font-size: 40px
         margin-bottom: 3%
+        @include mQ(950px)
+            font-size: 70px
+            padding-left: 5%
+            margin-bottom: 0%
+
+
     p
         color: $primeWhite
         font-size: 22px
         font-family: $classFont
-        padding:  0 3% 3%
+        padding: 0 3% 3%
         width: 62%
         margin-bottom: 5%
-    .imageCollage
+        @include mQ(1165px)
+            font-size: 18px
+            margin-bottom: 1%
+        @include mQ(990px)
+            font-size: 20px
+            margin-bottom: -5%
+        @include mQ(950px)
+            padding: 10% 7%
+            width: 100%
+            text-align: center
+            margin-bottom: 0
+            //padding:  0 3% 0
+
+
+    .fullImageCollage
         position: relative
         top: 220px
+        @include mQ(950px)
+            display: none
+
         img
-
-
             &:nth-child(1)
                 width: 41%
                 position: absolute
@@ -258,6 +340,45 @@ body
                     position: absolute
                     right: 0
                     bottom: 0
+
+    // .phoneImageCollage
+    //     display: flex
+    //     flex-wrap: wrap
+    //     width: 100%
+    //     justify-content: center
+    //
+    //     img
+    //         &:nth-child(1)
+
+                //width: 48%
+            //width: auto
+        // justify-content: center
+        // align-items: center
+
+    .phoneImageCollage
+        display: none
+        @include mQ(950px)
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 2fr 1fr
+            margin: -5%
+            img
+                &:nth-child(1)
+                    grid-column: 1
+                    grid-row: 1
+                    width: 100%
+                &:nth-child(2)
+                    grid-column: 2
+                    grid-row: 1
+                    width: 100%
+
+                &:nth-child(3)
+                    grid-column-start: 1
+                    grid-column-end: 3
+                    grid-row: 2
+                    width: 100%
+
+
 
 .footer
     background: $primeWhite
