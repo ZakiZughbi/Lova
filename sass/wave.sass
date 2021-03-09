@@ -15,6 +15,9 @@
         z-index: 7
         @include mQ(700px)
             height: 48px
+        @include mQ(540px)
+            display: none
+
 
     .fill1
         position: absolute
@@ -24,6 +27,8 @@
         height: 10px
         z-index: 10
         width: 13%
+        @include mQ(540px)
+            display: none
 
     //Top Wave
     .custom-shape-divider-top-1614958383
@@ -34,6 +39,8 @@
         overflow: hidden
         line-height: 0
         z-index: 1
+        @include mQ(540px)
+            display: none
 
         svg
             position: relative
@@ -62,6 +69,8 @@
             overflow: hidden
         @include mQ(600px)
             width: 100%
+        @include mQ(540px)
+            display: none
 
 
 
@@ -80,10 +89,6 @@
             @include mQ(700px)
                 transform: rotate(7deg)
 
-
-
-
-
         .shape-fill
             fill: $primeBlack
 
@@ -101,6 +106,9 @@
         animation: rotate 1.5s linear infinite
         @include mQ(1215px)
             height: 120px
+        @include mQ(540px)
+            height: 20px
+            top: 9px
 
 
 
@@ -122,7 +130,8 @@
             width: 22%
             left: -5px
             top: 100px + 46px + 12px - 2px
-            // display: none
+        @include mQ(540px)
+            display: none
 
 
 //Aniamtion

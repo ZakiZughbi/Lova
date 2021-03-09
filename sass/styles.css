@@ -32,6 +32,11 @@
     height: 48px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .wave .block {
+    display: none;
+  }
+}
 .wave .fill1 {
   position: absolute;
   right: 0;
@@ -41,6 +46,11 @@
   z-index: 10;
   width: 13%;
 }
+@media only screen and (max-width: 540px) {
+  .wave .fill1 {
+    display: none;
+  }
+}
 .wave .custom-shape-divider-top-1614958383 {
   position: absolute;
   top: 46px;
@@ -49,6 +59,11 @@
   overflow: hidden;
   line-height: 0;
   z-index: 1;
+}
+@media only screen and (max-width: 540px) {
+  .wave .custom-shape-divider-top-1614958383 {
+    display: none;
+  }
 }
 .wave .custom-shape-divider-top-1614958383 svg {
   position: relative;
@@ -80,6 +95,11 @@
 @media only screen and (max-width: 600px) {
   .wave .custom-shape-divider-bottom-1614959127-5 {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .wave .custom-shape-divider-bottom-1614959127-5 {
+    display: none;
   }
 }
 .wave .custom-shape-divider-bottom-1614959127-5 svg {
@@ -122,6 +142,12 @@
     height: 120px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .wave .color {
+    height: 20px;
+    top: 9px;
+  }
+}
 .wave .fill2 {
   position: absolute;
   height: 100px;
@@ -145,6 +171,11 @@
     width: 22%;
     left: -5px;
     top: 156px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .wave .fill2 {
+    display: none;
   }
 }
 
@@ -211,7 +242,7 @@ body {
 @media only screen and (max-width: 750px) {
   .header nav #logo img {
     width: 27%;
-    min-width: 15%;
+    min-width: 100px;
   }
 }
 .header nav .menu .menuBars {
@@ -284,6 +315,11 @@ body {
     font-size: 80px;
   }
 }
+@media only screen and (max-width: 400px) {
+  .header .homeImg h2 {
+    font-size: 70px;
+  }
+}
 .header .homeImg img {
   width: 100%;
   grid-column-start: 1;
@@ -312,6 +348,11 @@ body {
     padding: 130px 7%;
   }
 }
+@media only screen and (max-width: 540px) {
+  .bio {
+    top: 29px;
+  }
+}
 .bio .profile {
   display: flex;
   align-items: center;
@@ -334,6 +375,16 @@ body {
     width: 22%;
   }
 }
+@media only screen and (max-width: 540px) {
+  .bio .profile img {
+    min-width: 50%;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .bio .profile img {
+    margin-right: 10px;
+  }
+}
 .bio .profile .title h3 {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
@@ -344,15 +395,40 @@ body {
     font-size: 35px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .bio .profile .title h3 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .bio .profile .title h3 {
+    font-size: 27px;
+  }
+}
 .bio .profile .title .underline {
   width: 220px;
   background-color: #FFFFFF;
   height: 2px;
 }
+@media only screen and (max-width: 540px) {
+  .bio .profile .title .underline {
+    width: 175px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .bio .profile .title .underline {
+    width: 150px;
+  }
+}
 .bio .profile .title p {
   color: #666666;
   font-size: 22px;
   font-family: "Oswald", sans-serif;
+}
+@media only screen and (max-width: 540px) {
+  .bio .profile .title p {
+    font-size: 18px;
+  }
 }
 .bio .content {
   align-items: flex-end;
@@ -376,6 +452,11 @@ body {
     text-align: center;
   }
 }
+@media only screen and (max-width: 540px) {
+  .bio .content p {
+    font-size: 18px;
+  }
+}
 
 .sec1 {
   background-color: #121212;
@@ -393,6 +474,11 @@ body {
     padding: 28% 5%;
   }
 }
+@media only screen and (max-width: 540px) {
+  .sec1 {
+    margin-top: 29px;
+  }
+}
 .sec1 h2 {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
@@ -402,6 +488,16 @@ body {
   .sec1 h2 {
     font-size: 70px;
     padding-left: 5%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sec1 h2 {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .sec1 h2 {
+    font-size: 50px;
   }
 }
 .sec1 p {
@@ -426,6 +522,11 @@ body {
     padding: 10% 7%;
     width: 100%;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sec1 p {
+    font-size: 18px;
   }
 }
 .sec1 .imgContainer {
@@ -505,6 +606,11 @@ body {
     font-size: 10vw;
   }
 }
+@media only screen and (max-width: 540px) {
+  .sloganContainer .h2Container h2 {
+    font-size: 11vw;
+  }
+}
 .sloganContainer img {
   width: 100%;
   grid-column: 1;
@@ -534,6 +640,16 @@ body {
     margin-bottom: 0%;
   }
 }
+@media only screen and (max-width: 540px) {
+  .sec2 h2 {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .sec2 h2 {
+    font-size: 50px;
+  }
+}
 .sec2 p {
   color: #FFFFFF;
   font-size: 22px;
@@ -560,6 +676,11 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sec2 p {
+    font-size: 18px;
   }
 }
 .sec2 .fullImageCollage {
@@ -655,6 +776,11 @@ body {
     width: 35px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .footer .translateContainer img {
+    width: 28px;
+  }
+}
 .footer .translateContainer .lanContainer {
   display: none;
 }
@@ -694,6 +820,11 @@ body {
     margin: 7% 7% 10%;
   }
 }
+@media only screen and (max-width: 580px) {
+  .footer h2 {
+    font-size: 8.4vw;
+  }
+}
 .footer .bottom {
   margin-top: 6%;
   display: flex;
@@ -711,17 +842,58 @@ body {
 }
 @media only screen and (max-width: 775px) {
   .footer .bottom .media {
-    display: block;
+    width: 80%;
+    margin: 0 10% 10%;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
-.footer .bottom .media img {
-  width: 25px;
+.footer .bottom .media a {
+  text-decoration: none;
+  margin: 0 3%;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom .media a .contain {
+    padding: 4% 0 3%;
+    display: flex;
+    flex-wrap: none;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+  .footer .bottom .media a .contain:hover {
+    background: #EBEBEB;
+  }
+}
+.footer .bottom .media a .contain img {
+  width: 27px;
   margin: 0 2.5%;
 }
 @media only screen and (max-width: 775px) {
-  .footer .bottom .media img {
-    width: 15%;
-    border-bottom: 1px solid #666666;
+  .footer .bottom .media a .contain img {
+    width: 7%;
+    min-width: 35px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .footer .bottom .media a .contain img {
+    min-width: 25px;
+  }
+}
+.footer .bottom .media a .contain p {
+  display: none;
+  margin-left: 2%;
+  color: black;
+  font-size: 24px;
+  font-family: "Oswald", sans-serif;
+}
+@media only screen and (max-width: 775px) {
+  .footer .bottom .media a .contain p {
+    display: block;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .footer .bottom .media a .contain p {
+    font-size: 18px;
   }
 }
 .footer .bottom .btnContainer {
@@ -786,6 +958,11 @@ body {
   .footer .bottom .logoContainer img {
     justify-content: flex-start;
     width: 25%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .footer .bottom .logoContainer img {
+    min-width: 110px;
   }
 }
 

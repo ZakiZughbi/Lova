@@ -45,7 +45,7 @@ body
                 width: 170px
                 @include mQ(750px)
                     width: 27%
-                    min-width: 15%
+                    min-width: 100px
         .menu
             .menuBars
                 display: none
@@ -101,12 +101,8 @@ body
             z-index: 1
             @include mQ(850px)
                 font-size: 80px
-            // position: absolute
-            // top: 30%
-            // left: 37%
-            // @include mQ(750px)
-            //     font-size: 15vh
-
+            @include mQ(400px)
+                font-size: 70px
 
         img
             width: 100%
@@ -128,6 +124,8 @@ body
     @include mQ(990px)
         flex-wrap: wrap
         padding: 130px 7%
+    @include mQ(540px)
+        top: (29px)
 
     .profile
         display: flex
@@ -145,6 +143,11 @@ body
             margin-right: 30px
             @include mQ(990px)
                 width: 22%
+            @include mQ(540px)
+                min-width: 50%
+            @include mQ(325px)
+                margin-right: 10px
+
 
         .title
             h3
@@ -153,15 +156,28 @@ body
                 color: $primeWhite
                 @include mQ(990px)
                     font-size: 35px
+                @include mQ(540px)
+                    font-size: 30px
+                @include mQ(325px)
+                    font-size: 27px
+
+
 
             .underline
                 width: 220px
                 background-color: $primeWhite
                 height: 2px
+                @include mQ(540px)
+                    width: 175px
+                @include mQ(325px)
+                    width: 150px
+
             p
                 color: $primeGrey
                 font-size: 22px
                 font-family: $modFont
+                @include mQ(540px)
+                    font-size: 18px
     .content
         //display: flex
         align-items: flex-end
@@ -177,6 +193,8 @@ body
                 font-size: 20px
                 padding: 0 7%
                 text-align: center
+            @include mQ(540px)
+                font-size: 18px
 
 
 .sec1
@@ -189,6 +207,9 @@ body
     @include mQ(1200px)
         flex-wrap: wrap
         padding: 28% 5%
+    @include mQ(540px)
+        margin-top: 29px
+
 
                     //280px
 
@@ -199,6 +220,11 @@ body
         @include mQ(950px)
             font-size: 70px
             padding-left: 5%
+        @include mQ(540px)
+            font-size: 55px
+        @include mQ(325px)
+            font-size: 50px
+
 
     p
         color: $primeWhite
@@ -214,6 +240,8 @@ body
             padding: 10% 7%
             width: 100%
             text-align: center
+        @include mQ(540px)
+            font-size: 18px
 
 
     .imgContainer
@@ -258,6 +286,7 @@ body
         @include mQ(950px)
             margin: 0
             padding: 0%
+
         h2
             font-family: $modFont
             font-size: 70px
@@ -276,6 +305,8 @@ body
                 font-size: 9vw
             @include mQ(560px)
                 font-size: 10vw
+            @include mQ(540px)
+                font-size: 11vw
 
 
     img
@@ -299,6 +330,10 @@ body
             font-size: 70px
             padding-left: 5%
             margin-bottom: 0%
+        @include mQ(540px)
+            font-size: 55px
+        @include mQ(325px)
+            font-size: 50px
 
 
     p
@@ -319,7 +354,8 @@ body
             width: 100%
             text-align: center
             margin-bottom: 0
-            //padding:  0 3% 0
+        @include mQ(540px)
+            font-size: 18px
 
 
     .fullImageCollage
@@ -399,6 +435,8 @@ body
                 width: 25px
             @include mQ(775px)
                 width: 35px
+            @include mQ(540px)
+                width: 28px
 
 
         .lanContainer
@@ -429,29 +467,55 @@ body
             font-size: 6.5vw
             border: none
             margin: 7% 7% 10%
+        @include mQ(580px)
+            font-size: 8.4vw
 
     .bottom
         margin-top: 6%
-        //padding-bottom: 2%
         display: flex
         justify-content: space-around
         @include mQ(775px)
             flex-wrap: wrap
-
         .media
             display: flex
             width: 30%
             align-items: flex-end
             @include mQ(775px)
-                display: block
+                width: 80%
+                margin: 0 10% 10%
+                align-items: center
+                flex-wrap: wrap
+            a
+                text-decoration: none
+                margin: 0 3%
+                .contain
+                    @include mQ(775px)
+                        padding: 4% 0 3%
+                        display: flex
+                        flex-wrap: none
+                        align-items: center
+                        border-bottom: 2px solid black
+                        &:hover
+                            background: #EBEBEB
+                    img
+                        width: 27px
+                        margin: 0 2.5%
+                        @include mQ(775px)
+                            width: 7%
+                            min-width: 35px
+                        @include mQ(400px)
+                            min-width: 25px
 
-            img
-                width: 25px
-                margin: 0 2.5%
-                @include mQ(775px)
-                    width: 15%
-                    border-bottom: 1px solid $primeGrey
-
+                    p
+                        display: none
+                        margin-left: 2%
+                        color: black
+                        font-size: 24px
+                        font-family: $modFont
+                        @include mQ(775px)
+                            display: block
+                        @include mQ(580px)
+                            font-size: 18px
 
         .btnContainer
             width: 30%
@@ -503,3 +567,5 @@ body
                 @include mQ(775px)
                     justify-content: flex-start
                     width: 25%
+                @include mQ(540px)
+                    min-width: 110px
