@@ -1,3 +1,4 @@
+//@import ./styles.sass
 //Fonts
 $classFont: 'Cardo', serif
 $modFont: 'Oswald', sans-serif
@@ -29,3 +30,45 @@ $rgbYellow: #FFFF00
 @mixin mQ($arg)
     @media only screen and (max-width: $arg)
         @content
+
+@keyframes bar1In
+    0%
+        margin: 0
+
+    100%
+        transform: rotate(45deg)
+        margin: 10px 0px 0 20px
+        width: 40px
+
+
+@keyframes bar2In
+    0%
+        width: 45px
+        margin-left: auto
+        margin: 9.5px 0
+
+    100%
+        transform: rotate(-45deg)
+        width: 40px
+
+
+@keyframes bar1out
+    0%
+        transform: rotate(45deg)
+        margin: 10px 0px 0 20px
+        width: 40px
+
+    100%
+        margin: 0
+        transform: rotate(0deg)
+
+@keyframes bar2out
+    0%
+        transform: rotate(-45deg)
+        width: 40px
+
+    100%
+        transform: rotate(0deg)
+        width: 45px
+        margin-left: auto
+        margin: 9.5px 0

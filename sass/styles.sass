@@ -56,18 +56,37 @@ body
                     height: 5px
                     background: $primeWhite
                     margin: 8px 0
+                    z-index: 11
+                    position: absolute
+                    right: 10px
+                    top: 17px
+                    &:nth-child(1)
+                        margin: 0
                     &:nth-child(2)
                         width: 45px
                         margin-left: auto
+                        margin: 9.5px 0
                     &:nth-child(3)
                         width: 30px
                         margin-left: auto
+                        margin: 20px 0
+                        transition: width 0.2s
 
             .navlinks
                 display: flex
                 align-items: center
                 @include mQ(750px)
-                    display: none
+                    z-index: 5
+                    display: block
+                    position: fixed
+                    width: 0
+                    height: 100%
+                    background-color: $primeBlack
+                    top: 0
+                    right: 0
+                    padding-top: 70px
+                    overflow: hidden
+                    transition: width 0.5s
 
                 li
                     font-family: $modFont
@@ -75,19 +94,26 @@ body
                     margin: 0 20px
                     list-style: none
                     color: $primeWhite
+                    @include mQ(750px)
+                        padding: 12px 0
                     &:nth-child(3)
                         @include rgb()
                         border-radius: 10px
                         padding: 5px
                         animation: rotate 1.5s linear infinite
+                        @include mQ(750px)
+                            padding: 4px 0
+                            border-radius: 0
+                            margin: 0
                         div
                             width: 100%
                             padding: 7px 15px
                             border-radius: 10px
                             background-color: $primeBlack
+                            @include mQ(750px)
+                                border-radius: 0
 
     .homeImg
-        //position: relative
         display: grid
         grid-template-columns: 1fr 2fr 1fr
         grid-template-rows: 1fr 1fr 1fr
@@ -114,7 +140,7 @@ body
 .bio
     background-color: $primeBlack
     position: relative
-    z-index: 2
+    z-index: 1
     top: 105px + 46px + 3px
     display: flex
     justify-content: center
@@ -282,7 +308,7 @@ body
         margin: 0 5%
         grid-column: 1
         grid-row: 2
-        z-index: 9
+        z-index: 1
         @include mQ(950px)
             margin: 0
             padding: 0%
@@ -569,3 +595,136 @@ body
                     width: 25%
                 @include mQ(540px)
                     min-width: 110px
+
+
+//Services Page
+.rgbLine
+    height: 20px
+    top: 9px
+    width: 100%
+    background: linear-gradient(-45deg, #9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
+    transform: rotate(0.0deg)
+    animation: rotate 1.5s linear infinite
+
+.msgContainer
+    background-color: $primeWhite
+    padding: 5% 8%
+    font-family: $classFont
+    font-size: 23px
+    text-align: center
+    @include mQ(1165px)
+        font-size: 18px
+    @include mQ(990px)
+        font-size: 20px
+    @include mQ(540px)
+        font-size: 18px
+
+.services
+    width: 100%
+    display: flex
+    @include mQ(950px)
+        flex-wrap: wrap-reverse
+    .imgContainer
+        width: 50%
+        @include mQ(950px)
+            width: 100%
+        img
+            width: 100%
+    .content
+        text-align: center
+        color: $primeWhite
+        width: 50%
+        margin: auto
+        padding: 0 4%
+        @include mQ(950px)
+            width: 100%
+            padding: 12%
+
+
+        h2
+            font-family: $modFont
+            font-size: 40px
+            margin-bottom: 7%
+
+        p
+            font-family: $classFont
+            font-size: 23px
+            @include mQ(1200px)
+                font-size: 18px
+            @include mQ(990px)
+                font-size: 16px
+
+
+//Contact Page
+
+.contactContainer
+    width: 100%
+    display: flex
+    .content
+        width: 50%
+        text-align: center
+        color: $primeWhite
+        margin: auto
+        //padding: 5% 0
+        @include mQ(950px)
+            width: 100%
+            padding: 80px 0
+
+        h2
+            font-family: $modFont
+            font-size: 60px
+            margin-bottom: 4%
+        p
+            font-family: $classFont
+            font-size: 23px
+            margin: 1% 0
+            @include mQ(1200px)
+                font-size: 18px
+            @include mQ(990px)
+                font-size: 16px
+        .formContainer
+            display: flex
+            justify-content: center
+
+            form
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: center
+                width: 100%
+                input
+                    display: block
+                    outline: none
+                    //margin: auto
+                    color: $primeWhite
+                    font-family: $classFont
+                    font-size: 23px
+                    background: none
+                    border: none
+                    border-bottom: 2px solid $primeWhite
+                    padding: 2% 0
+                    width: 75%
+                    margin: 4% 0px
+                    @include mQ(990px)
+                        font-size: 20px
+                    &::placeholder
+                        color: $primeWhite
+                    &:nth-child(4)
+                        @include rgb()
+                        width: 26%
+                        background: blue
+                        font-size: 23px
+                        font-family: $modFont
+                        padding: 7px
+                        color: $primeWhite
+                        border: none
+                        border-radius: 5px
+
+
+    .imgContainer
+        width: 50%
+        @include mQ(950px)
+            display: none
+        img
+            width: 100%
+            margin-bottom: -5px
