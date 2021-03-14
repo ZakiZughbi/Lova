@@ -11,26 +11,27 @@ let clicked = 0;
 let lanClicked = 0;
 const headerList = ['Creativity', 'Simplicity', 'Modernity'];
 
+const contactBtn = document.querySelector('.navlinks').children[2];
 
 
 menuBars.addEventListener('click', ()=>{
-    clicked ++
+    clicked ++;
     if (clicked == 1){
         menuBars.children[0].style.animation="bar1In 0.5s forwards";
         menuBars.children[1].style.animation="bar2In 0.5s forwards";
         menuBars.children[2].style.width="0";
-        navLinks.style.width="100%"
+        navLinks.style.width="100%";
     } else{
         clicked = 0;
         menuBars.children[0].style.animation="bar1out 0.5s forwards";
         menuBars.children[1].style.animation="bar2out 0.5s forwards";
         menuBars.children[2].style.width="30px";
-        navLinks.style.width="0%"
+        navLinks.style.width="0%";
     }
 });
 
 translateBtn.addEventListener('click', ()=>{
-    lanClicked ++
+    lanClicked ++;
     if (lanClicked == 1){
         //lanClicked = 0;
         lan.style.display="block";
@@ -56,3 +57,8 @@ translateBtn.addEventListener('click', ()=>{
 //         homeHeader.innerHTML=headerList[i];
 //     }, 3000)
 // }
+
+contactBtn.addEventListener('click', ()=>{
+    window.location.replace("./contact.html");
+    console.log('yes');
+});

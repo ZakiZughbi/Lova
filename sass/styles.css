@@ -383,6 +383,9 @@ body {
     transition: width 0.5s;
   }
 }
+.header nav .menu .navlinks a {
+  text-decoration: none;
+}
 .header nav .menu .navlinks li {
   font-family: "Oswald", sans-serif;
   font-size: 23px;
