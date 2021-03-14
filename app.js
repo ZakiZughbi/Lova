@@ -50,9 +50,9 @@ translateBtn.addEventListener('click', ()=>{
 //     }
 // }, 5000)
 
-for(let i=0; i<headerList.length; i++){
-    setTimeout(()=>{
-        homeHeader.innerHTML='';
-        homeHeader.innerHTML=headerList[i];
-    }, 3000)
-}
+// for(let i=0; i<headerList.length; i++){
+//     setTimeout(()=>{
+//         homeHeader.innerHTML='';
+//         homeHeader.innerHTML=headerList[i];
+//     }, 3000)
+// }
