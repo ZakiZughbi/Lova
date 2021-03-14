@@ -113,7 +113,9 @@ body
                             background-color: $primeBlack
                             @include mQ(750px)
                                 border-radius: 0
-
+    .homeImg1
+        h2
+            animation: headerFade 5s linear infinite
     .homeImg
         display: grid
         grid-template-columns: 1fr 2fr 1fr
@@ -619,6 +621,11 @@ body
         font-size: 20px
     @include mQ(540px)
         font-size: 18px
+    // p
+    //     opacity: 0
+    //     transition: opacity 0.3s
+
+
 
 .services
     width: 100%

@@ -51,12 +51,22 @@ translateBtn.addEventListener('click', ()=>{
 //     }
 // }, 5000)
 
-// for(let i=0; i<headerList.length; i++){
-//     setTimeout(()=>{
-//         homeHeader.innerHTML='';
-//         homeHeader.innerHTML=headerList[i];
-//     }, 3000)
-// }
+
+let i = 1;
+function headerLoop(){
+    setTimeout (()=> {
+        homeHeader.innerHTML=headerList[i];
+        i++;
+        if (i ==3){
+            i = 1
+        }
+        if (i < 10) {
+            headerLoop()
+        }
+    }, 5000)
+}
+
+headerLoop()
 
 contactBtn.addEventListener('click', ()=>{
     window.location.replace("./contact.html");
