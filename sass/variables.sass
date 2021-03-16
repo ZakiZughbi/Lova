@@ -84,8 +84,48 @@ $rgbYellow: #FFFF00
     100%
         opacity: 0
 
-@keyframes fadeIn
+@keyframes fadeInAni
     0%
         opacity: 0
     100%
         opacity: 1
+
+@keyframes slideAni
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translate(15px)
+
+@keyframes planeAni
+    100%
+        transform: translate(-35px, 33px)
+
+@keyframes popAni
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(1.2)
+    100%
+        transform: scale(1)
+    // 0%
+    //     opacity: 0
+    // 100%
+    //     opacity: 1
+
+
+
+.fadeIn
+    animation: fadeInAni 2s ease-out
+
+.slide
+    opacity: 0
+    animation: slideAni 1s ease-out
+
+.planeClass
+    //transition-duration: 3s
+    //transform: translate(-35px, 33px)
+    animation: planeAni 2s ease-out
+
+.pop
+    animation: popAni 1s linear

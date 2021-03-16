@@ -64,7 +64,7 @@
     opacity: 0;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeInAni {
   0% {
     opacity: 0;
   }
@@ -72,6 +72,48 @@
     opacity: 1;
   }
 }
+@keyframes slideAni {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(15px);
+  }
+}
+@keyframes planeAni {
+  100% {
+    transform: translate(-35px, 33px);
+  }
+}
+@keyframes popAni {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fadeIn {
+  animation: fadeInAni 2s ease-out;
+}
+
+.slide {
+  opacity: 0;
+  animation: slideAni 1s ease-out;
+}
+
+.planeClass {
+  animation: planeAni 2s ease-out;
+}
+
+.pop {
+  animation: popAni 1s linear;
+}
+
 @keyframes rotate {
   0% {
     filter: hue-rotate(0deg);
@@ -138,7 +180,7 @@
     opacity: 0;
   }
 }
-@keyframes fadeIn {
+@keyframes fadeInAni {
   0% {
     opacity: 0;
   }
@@ -146,6 +188,48 @@
     opacity: 1;
   }
 }
+@keyframes slideAni {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(15px);
+  }
+}
+@keyframes planeAni {
+  100% {
+    transform: translate(-35px, 33px);
+  }
+}
+@keyframes popAni {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fadeIn {
+  animation: fadeInAni 2s ease-out;
+}
+
+.slide {
+  opacity: 0;
+  animation: slideAni 1s ease-out;
+}
+
+.planeClass {
+  animation: planeAni 2s ease-out;
+}
+
+.pop {
+  animation: popAni 1s linear;
+}
+
 .wave {
   position: relative;
   margin-top: -9px;
@@ -532,7 +616,7 @@ body {
   align-items: center;
   margin-right: 10%;
   justify-content: center;
-  animation: fadeIn 2s linear;
+  opacity: 0;
 }
 @media only screen and (max-width: 600px) {
   .bio .profile {
@@ -614,6 +698,8 @@ body {
   font-size: 23px;
   color: #FFFFFF;
   width: 100%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 1165px) {
   .bio .content p {
@@ -658,6 +744,8 @@ body {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   font-size: 40px;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 950px) {
   .sec1 h2 {
@@ -681,6 +769,8 @@ body {
   font-family: "Cardo", serif;
   padding: 3%;
   width: 62%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 1165px) {
   .sec1 p {
@@ -724,6 +814,7 @@ body {
   bottom: -150px;
   right: 15px;
   z-index: 1;
+  transform: translate(35px, -33px);
 }
 .sec1 .imgContainer .border {
   width: 30%;
@@ -760,6 +851,7 @@ body {
   padding: 2%;
   margin: 0 13%;
   background-color: #FFFFFF;
+  opacity: 0;
 }
 .sloganContainer .h2Container h2:nth-child(2) {
   color: #FFFFFF;
@@ -807,6 +899,8 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   margin-bottom: 3%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 950px) {
   .sec2 h2 {
@@ -832,6 +926,8 @@ body {
   padding: 0 3% 3%;
   width: 62%;
   margin-bottom: 5%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 1165px) {
   .sec2 p {
@@ -976,6 +1072,8 @@ body {
   text-align: center;
   border-bottom: 4px solid #121212;
   margin: 0 20.5%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 1450px) {
   .footer h2 {
@@ -1172,6 +1270,9 @@ body {
     font-size: 18px;
   }
 }
+.msgContainer p {
+  opacity: 0;
+}
 
 .services {
   width: 100%;
@@ -1210,10 +1311,14 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 40px;
   margin-bottom: 7%;
+  transform: translate(-15px);
+  opacity: 0;
 }
 .services .content p {
   font-family: "Cardo", serif;
   font-size: 23px;
+  transform: translate(-15px);
+  opacity: 0;
 }
 @media only screen and (max-width: 1200px) {
   .services .content p {

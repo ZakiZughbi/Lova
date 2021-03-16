@@ -12,7 +12,6 @@ let lanClicked = 0;
 const headerList = ['Creativity', 'Simplicity', 'Modernity'];
 const logoLight = document.getElementById('logo');
 const logoDark = document.querySelector('.logoContainer');
-
 const contactBtn = document.querySelector('.navlinks').children[2];
 
 
@@ -52,15 +51,15 @@ function headerLoop(){
         homeHeader.innerHTML=headerList[i];
         i++;
         if (i ==3){
-            i = 1
+            i = 1;
         }
         if (i < 10) {
-            headerLoop()
+            headerLoop();
         }
-    }, 5000)
+    }, 5000);
 }
 
-headerLoop()
+headerLoop();
 
 contactBtn.addEventListener('click', ()=>{
     window.location.replace("./contact.html");
@@ -72,4 +71,118 @@ logoDark.addEventListener('click', ()=>{
 
 logoLight.addEventListener('click', ()=>{
     window.location.replace("./index.html");
+});
+
+let appearOptions = {
+  rootMargin: '0px 0px -150px 0px',
+  threshold: 1
+};
+
+let appearOnScroll = new IntersectionObserver((entries, appearOnScroll)=>{
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            return;
+        } else{
+            entry.target.classList.add('fadeIn');
+            appearOnScroll.unobserve(entry.target);
+            entry.target.style.opacity="1";
+        }
+    });
+}, appearOptions);
+
+
+let slideOnScroll = new IntersectionObserver((entries, slideOnScroll)=>{
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            return;
+        } else{
+            entry.target.classList.add('slide');
+            appearOnScroll.unobserve(entry.target);
+            entry.target.style.opacity="1";
+            setTimeout(()=>{
+                entry.target.style.transform="translate(15px)";
+            }, 1000);
+
+        }
+    });
+}, appearOptions);
+
+let planScroll = new IntersectionObserver((entries, slideOnScroll)=>{
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            return;
+        } else{
+            entry.target.classList.add('planeClass');
+            appearOnScroll.unobserve(entry.target);
+            setTimeout(()=>{
+                entry.target.style.transform="translate(-35px, 33px)";
+            }, 2000);
+        }
+    });
+}, appearOptions);
+
+
+let popOptions = {
+  rootMargin: '0px',
+  threshold: 1
+};
+
+let BtnScroll = new IntersectionObserver((entries, BtnScroll)=>{
+    entries.forEach(entry => {
+        if (!entry.isIntersecting){
+            return;
+        } else{
+            entry.target.classList.add('pop');
+            appearOnScroll.unobserve(entry.target);
+        }
+    });
+}, popOptions);
+
+
+
+const pro = document.querySelector('.profile');
+const msgService = document.querySelector('.msgContainer p');
+const h2slogan1 = document.querySelectorAll('.h2Container h2')[0];
+const h2slogan2 = document.querySelectorAll('.h2Container h2')[1];
+
+
+const pContent = document.querySelector('.content p');
+const h2Content = document.querySelector('.content h2');
+const pSec1 = document.querySelector('.sec1 p');
+const h2Sec1 = document.querySelector('.sec1 h2');
+const pSec2 = document.querySelector('.sec2 p');
+const h2Sec2 = document.querySelector('.sec2 h2');
+const h2foot = document.querySelector('.footer h2');
+
+const planeImg = document.querySelector('.imgContainer img');
+
+const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2];
+const slideArray = [pContent, pSec1, h2Sec1, pSec2, h2Sec2, h2foot, h2Content];
+
+const footerBtns = document.querySelectorAll('.media img');
+fadeArray.forEach(e => {
+    if(e == null){
+        return;
+    } else{
+        appearOnScroll.observe(e);
+    }
+});
+
+slideArray.forEach(e => {
+    if(e == null){
+        return;
+    } else{
+        slideOnScroll.observe(e);
+    }
+});
+
+planScroll.observe(planeImg);
+
+
+footerBtns.forEach(e => {
+    if(e == null){
+        return;
+    } else{
+        BtnScroll.observe(e);
+    }
 });
