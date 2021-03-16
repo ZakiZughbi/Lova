@@ -75,7 +75,7 @@ logoLight.addEventListener('click', ()=>{
 
 let appearOptions = {
   rootMargin: '0px 0px -100px 0px',
-  threshold: 1
+  threshold: 0.70
 };
 
 let secOptions = {
@@ -147,19 +147,19 @@ const msgService = document.querySelector('.msgContainer p');
 const h2slogan1 = document.querySelectorAll('.h2Container h2')[0];
 const h2slogan2 = document.querySelectorAll('.h2Container h2')[1];
 
-
-const pContent = document.querySelector('.content p');
-const h2Content = document.querySelector('.content h2');
+const pBioContent = document.querySelector('.bio .content p');
+const pServiceContent = document.querySelector('.services .content p');
+const h2ServiceContent = document.querySelector('.services .content h2');
 const pSec1 = document.querySelector('.sec1 p');
 const h2Sec1 = document.querySelector('.sec1 h2');
 const pSec2 = document.querySelector('.sec2 p');
 const h2Sec2 = document.querySelector('.sec2 h2');
 const h2foot = document.querySelector('.footer h2');
 
-const planeImg = document.querySelector('.imgContainer img');
+const planeImg = document.querySelector('.sec1 .imgContainer img');
 
 const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2];
-const slideArray = [pContent, pSec1, h2Sec1, pSec2, h2Sec2, h2foot, h2Content];
+const slideArray = [pServiceContent, pSec1, h2Sec1, pSec2, h2Sec2, h2foot, h2ServiceContent, pBioContent];
 
 const footerBtns = document.querySelectorAll('.media img');
 fadeArray.forEach(e => {
@@ -178,7 +178,7 @@ slideArray.forEach(e => {
     }
 });
 
-planScroll.observe(planeImg);
+//planScroll.observe(planeImg);
 
 
 footerBtns.forEach(e => {
