@@ -74,9 +74,15 @@ logoLight.addEventListener('click', ()=>{
 });
 
 let appearOptions = {
-  rootMargin: '0px 0px -150px 0px',
+  rootMargin: '0px 0px -100px 0px',
   threshold: 1
 };
+
+let secOptions = {
+  rootMargin: '0px',
+  threshold: 1
+};
+
 
 let appearOnScroll = new IntersectionObserver((entries, appearOnScroll)=>{
     entries.forEach(entry => {
@@ -122,10 +128,6 @@ let planScroll = new IntersectionObserver((entries, slideOnScroll)=>{
 }, appearOptions);
 
 
-let popOptions = {
-  rootMargin: '0px',
-  threshold: 1
-};
 
 let BtnScroll = new IntersectionObserver((entries, BtnScroll)=>{
     entries.forEach(entry => {
@@ -136,7 +138,7 @@ let BtnScroll = new IntersectionObserver((entries, BtnScroll)=>{
             appearOnScroll.unobserve(entry.target);
         }
     });
-}, popOptions);
+}, secOptions);
 
 
 
