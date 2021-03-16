@@ -6,10 +6,12 @@ const lan = document.querySelector('.lanContainer');
 const arabic = document.querySelector('.lan').children[0];
 const spainsh = document.querySelector('.lan').children[1];
 const english = document.querySelector('.lan').children[2];
-const homeHeader = document.querySelector('.homeImg1 h2')
+const homeHeader = document.querySelector('.homeImg1 h2');
 let clicked = 0;
 let lanClicked = 0;
 const headerList = ['Creativity', 'Simplicity', 'Modernity'];
+const logoLight = document.getElementById('logo');
+const logoDark = document.querySelector('.logoContainer');
 
 const contactBtn = document.querySelector('.navlinks').children[2];
 
@@ -44,14 +46,6 @@ translateBtn.addEventListener('click', ()=>{
 });
 
 
-// setTimeout(()=>{
-//     for(let i=0; i<headerList.length; i++){
-//         homeHeader.innerHTML=''
-//         homeHeader.innerHTML=headerList[i]
-//     }
-// }, 5000)
-
-
 let i = 1;
 function headerLoop(){
     setTimeout (()=> {
@@ -70,5 +64,12 @@ headerLoop()
 
 contactBtn.addEventListener('click', ()=>{
     window.location.replace("./contact.html");
-    console.log('yes');
+});
+
+logoDark.addEventListener('click', ()=>{
+    window.location.replace("./index.html");
+});
+
+logoLight.addEventListener('click', ()=>{
+    window.location.replace("./index.html");
 });
