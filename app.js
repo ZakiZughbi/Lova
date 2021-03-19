@@ -158,8 +158,8 @@ const h2foot = document.querySelector('.footer h2');
 
 const planeImg = document.querySelector('.sec1 .imgContainer img');
 
-const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2];
-const slideArray = [pServiceContent, pSec1, h2Sec1, pSec2, h2Sec2, h2foot, h2ServiceContent, pBioContent];
+const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2, h2foot];
+const slideArray = [pServiceContent, pSec1, h2Sec1, pSec2, h2Sec2, h2ServiceContent, pBioContent];
 
 const footerBtns = document.querySelectorAll('.media img');
 fadeArray.forEach(e => {
