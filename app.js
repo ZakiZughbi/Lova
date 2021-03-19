@@ -102,11 +102,12 @@ let slideOnScroll = new IntersectionObserver((entries, slideOnScroll)=>{
         if (!entry.isIntersecting){
             return;
         } else{
+            //entry.target.style.transform="translate(-15px)";
             entry.target.classList.add('slide');
             appearOnScroll.unobserve(entry.target);
             entry.target.style.opacity="1";
             setTimeout(()=>{
-                entry.target.style.transform="translate(15px)";
+                entry.target.style.transform="translate(0px)";
             }, 1000);
 
         }
@@ -158,8 +159,8 @@ const h2foot = document.querySelector('.footer h2');
 
 const planeImg = document.querySelector('.sec1 .imgContainer img');
 
-const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2, h2foot];
-const slideArray = [pServiceContent, pSec1, h2Sec1, pSec2, h2Sec2, h2ServiceContent, pBioContent];
+const fadeArray = [pro, msgService, translateBtn, h2slogan1, h2slogan2];
+const slideArray = [pServiceContent, pSec1, h2Sec1, pSec2, h2Sec2, h2ServiceContent, h2foot, pBioContent];
 
 const footerBtns = document.querySelectorAll('.media img');
 fadeArray.forEach(e => {

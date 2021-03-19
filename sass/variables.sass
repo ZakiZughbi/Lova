@@ -17,6 +17,8 @@ $rgbPink: #D800FF
 $rgbPurple: #9300FF
 $rgbYellow: #FFFF00
 
+$tran: -15px
+
 @mixin rgb()
     background: linear-gradient(#9300FF,#D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF)
     animation: rotate 1.5s linear infinite
@@ -95,7 +97,7 @@ $rgbYellow: #FFFF00
         opacity: 0
     100%
         opacity: 1
-        transform: translate(15px)
+        transform: translate(0px)
 
 @keyframes planeAni
     100%
