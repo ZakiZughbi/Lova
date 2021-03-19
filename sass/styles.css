@@ -1403,7 +1403,7 @@ body {
 .contactContainer .content .formContainer form input::placeholder {
   color: #FFFFFF;
 }
-.contactContainer .content .formContainer form input:nth-child(4) {
+.contactContainer .content .formContainer form button {
   background: linear-gradient(#9300FF, #D800FF, #FF0000, #FFFF00 100px, #00C4FF, #0A00FF);
   animation: rotate 1.5s linear infinite;
   width: 26%;
