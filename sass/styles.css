@@ -1070,11 +1070,11 @@ body {
 .footer h2 {
   font-family: "Oswald", sans-serif;
   color: #121212;
-  font-size: 50px;
+  font-size: 52px;
   font-weight: 300;
   text-align: center;
   border-bottom: 4px solid #121212;
-  margin: 0 20.5%;
+  margin: 5% 10.5% 8%;
   transform: translate(-15px);
   opacity: 0;
 }
@@ -1086,6 +1086,7 @@ body {
 @media only screen and (max-width: 1130px) {
   .footer h2 {
     margin: 5% 15% 10%;
+    border: none;
     font-size: 4.2vw;
   }
 }
