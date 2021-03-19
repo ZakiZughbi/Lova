@@ -9,9 +9,9 @@ const english = document.querySelector('.lan').children[2];
 const homeHeader = document.querySelector('.homeImg1 h2');
 let clicked = 0;
 let lanClicked = 0;
-const headerList = ['Creativity', 'Simplicity', 'Modernity'];
+const headerList = ['Creativity', 'Simplicity', 'Innovative'];
 const logoLight = document.getElementById('logo');
-const logoDark = document.querySelector('.logoContainer');
+const logoDark = document.querySelector('.logoContainer img');
 const contactBtn = document.querySelector('.navlinks').children[2];
 
 

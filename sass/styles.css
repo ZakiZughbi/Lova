@@ -453,6 +453,7 @@ body {
 }
 .header nav #logo img {
   width: 170px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 750px) {
   .header nav #logo img {
@@ -520,6 +521,7 @@ body {
   margin: 0 20px;
   list-style: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 @media only screen and (max-width: 750px) {
   .header nav .menu .navlinks li {
@@ -1036,6 +1038,7 @@ body {
 .footer .translateContainer img {
   width: 30px;
   margin: 0 5px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1030px) {
   .footer .translateContainer img {
@@ -1226,6 +1229,7 @@ body {
 .footer .bottom .logoContainer img {
   width: 40%;
   min-width: 140px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 775px) {
   .footer .bottom .logoContainer img {
