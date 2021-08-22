@@ -43,11 +43,23 @@
                 <p>zaki@lovadesigns.com</p>
                 <div class="formContainer">
 
-                    <form name="contact" method="POST" data-netlify="true">
+                    <!-- <form name="contact" method="POST" data-netlify="true">
                         <input type="text" name="name" placeholder="Name">
                         <input type="text" name="email" placeholder="Number/Email">
                         <input type="text" name="message" placeholder="Message">
                         <button type="submit">Send</button>
+                    </form> -->
+                    <form action="https://formspree.io/f/mrgrorvg" method="POST">
+                      <label>
+                        <!-- Your email: -->
+                        <input type="email" name="_replyto">
+                      </label>
+                      <label>
+                        <!-- Your message: -->
+                        <textarea name="message"></textarea>
+                      </label>
+                      <!-- your other form fields go here -->
+                      <button type="submit">Send</button>
                     </form>
 
                 </div>
